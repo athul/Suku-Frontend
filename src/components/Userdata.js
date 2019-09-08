@@ -1,5 +1,6 @@
 import React from 'react'
-import {Box,Card,Text,Button} from 'rebass'
+import {Box,Card,Text,Button,Link} from 'rebass'
+import {GitHub,Instagram,Twitter,Linkedin} from 'react-feather'
 const User = ({ udatas }) => {
     return (<div>
 
@@ -14,27 +15,39 @@ const User = ({ udatas }) => {
                 <h6 class="card-title"><u>College</u>: {udata.College}</h6>
                 <h6 class="card-title"><u>Phone</u>: {udata.Phone}</h6>
                 <h6 class="card-title"><u>Email</u>: {udata.Email}</h6>
+                <span>
+                <Link px={3} variant='nav' href={udata.GitHub}><GitHub size='36' color='black'/></Link>
+                <Link px={3} variant='nav' href={udata.Twitter}><Twitter size='36' color='aqua'/></Link>
+                <Link px={3} variant='nav' href={udata.LinkedIn}><Linkedin size='36' color='blue'/></Link>
+                <Link px={3} variant='nav' href={udata.Instagram}><Instagram size='36' color='magenta'/></Link>
+                </span>
                 </center>
                 <><img src={udata.image} alt=""/></>
             </div >
             <div class="container">
             <div class="row">
-              <div class="col-sm">
+              <div class="col-md-3">
                 <Box width={256} bg='blue' color='white'>
-                <Card sx={{p: 1,borderRadius: 2,boxShadow: '0 0 16px rgba(0, 0, 0, .25)',}}>
+                <Card sx={{p: 2,borderRadius: 2,boxShadow: '0 0 16px rgba(0, 0, 0, .25)',}}>
                 <Text fontSize={12}>{udata.Skill1}</Text></Card>
-                 </Box>
+                </Box>
               </div>
-              <div class="col-sm">
+              <div class="col-md-3">
               <Box width={256} bg='yellow'>
-              <Card sx={{p: 1,borderRadius: 2,boxShadow: '0 0 16px rgba(0, 0, 0, .25)',}}>
+              <Card sx={{p: 2,borderRadius: 2,boxShadow: '0 0 16px rgba(0, 0, 0, .25)',}}>
               <Text fontSize={12}>{udata.Skill2}</Text></Card>
                </Box>
               </div>
-              <div class="col-sm">
-              <Box width={256} bg='aqua'>
-              <Card sx={{p: 1,borderRadius: 2,boxShadow: '0 0 16px rgba(0, 0, 0, .25)',}}>
+              <div class="col-md-3">
+              <Box width={256} px={2} bg='aqua'>
+              <Card sx={{p: 2,borderRadius: 2,boxShadow: '0 0 16px rgba(0, 0, 0, .25)',}}>
               <Text fontSize={12}>{udata.Skill3}</Text></Card>
+               </Box>
+              </div>
+              <div class="col-md-3">
+              <Box width={256} bg='green' color='white'>
+              <Card sx={{p: 2,borderRadius: 7,boxShadow: '0 0 16px rgba(0, 0, 0, .25)',}}>
+              <Text fontSize={12}>{udata.Skill4}</Text></Card>
                </Box>
               </div>
               </div>
@@ -59,14 +72,14 @@ const User = ({ udatas }) => {
             <a href={udata.Projecturl2} ><Button mr={3} color='white' bg='rebeccapurple'>Project Link</Button></a>
             </div></div>
             <div class="col-sm-6">
-            <img src="https://meenhacks.github.io/img/logo/MHACKS_transp.png" class="card-img-top"  alt="" />
+            <img src="https://meenhacks.github.io/img/logo/MHACKS_transp.png" width="501" height="334" class="card-img-top"  alt="" />
             <div class="card-body" style={{width:`18rem`}}>
             <h5 class="card-title">{udata.Project3}</h5>
             <p class="card-text">{udata.Project3desc}</p>
             <a href={udata.Projecturl3}><Button mr={3} color='white' bg='rebeccapurple'>Project Link</Button></a>
             </div></div>
             <div class="col-sm-6">
-            <img src="https://raw.githubusercontent.com/athul/blog/master/content/assets/n1.png" class="card-img-top" alt="" />
+            <img src="https://raw.githubusercontent.com/athul/blog/master/content/assets/n1.png" width="501" height="334" class="card-img-top" alt="" />
             <div class="card-body" style={{width:`18rem`}}>
             <h5 class="card-title">{udata.Project4}</h5>
             <p class="card-text">{udata.Project4desc}</p>
@@ -74,6 +87,7 @@ const User = ({ udatas }) => {
             </div></div></div>
             </center>
         </div>
+
         ))}
     </div>)
 };
