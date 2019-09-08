@@ -1,4 +1,5 @@
 import React from 'react'
+import {Box,Card,Text,Button} from 'rebass'
 const User = ({ udatas }) => {
     return (<div>
 
@@ -16,6 +17,29 @@ const User = ({ udatas }) => {
                 </center>
                 <><img src={udata.image} alt=""/></>
             </div >
+            <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                <Box width={256} bg='blue' color='white'>
+                <Card sx={{p: 1,borderRadius: 2,boxShadow: '0 0 16px rgba(0, 0, 0, .25)',}}>
+                <Text fontSize={12}>{udata.Skill1}</Text></Card>
+                 </Box>
+              </div>
+              <div class="col-sm">
+              <Box width={256} bg='yellow'>
+              <Card sx={{p: 1,borderRadius: 2,boxShadow: '0 0 16px rgba(0, 0, 0, .25)',}}>
+              <Text fontSize={12}>{udata.Skill2}</Text></Card>
+               </Box>
+              </div>
+              <div class="col-sm">
+              <Box width={256} bg='aqua'>
+              <Card sx={{p: 1,borderRadius: 2,boxShadow: '0 0 16px rgba(0, 0, 0, .25)',}}>
+              <Text fontSize={12}>{udata.Skill3}</Text></Card>
+               </Box>
+              </div>
+              </div>
+            </div>
+            <hr/>
             <center><h3>Projects</h3></center>
             <center>
             <div class="row">
@@ -24,7 +48,7 @@ const User = ({ udatas }) => {
             <div class="card-body" style={{width:`18rem`}}>
             <h5 class="card-title">{udata.Project1}</h5>
             <p class="card-text">{udata.Project1desc}</p>
-            <a href={udata.Projecturl1} class="btn btn-primary">Go somewhere</a>
+            <a href={udata.Projecturl1} ><Button mr={3} color='white' bg='rebeccapurple'>Project Link</Button></a>
             </div>
             </div>
             <div class="col-sm-6">
@@ -32,21 +56,21 @@ const User = ({ udatas }) => {
             <div class="card-body" style={{width:`18rem`}}>
             <h5 class="card-title">{udata.Project2}</h5>
             <p class="card-text">{udata.Project2desc}</p>
-            <a href={udata.Projecturl2} class="btn btn-primary">Go somewhere</a>
+            <a href={udata.Projecturl2} ><Button mr={3} color='white' bg='rebeccapurple'>Project Link</Button></a>
             </div></div>
             <div class="col-sm-6">
             <img src="https://meenhacks.github.io/img/logo/MHACKS_transp.png" class="card-img-top"  alt="" />
             <div class="card-body" style={{width:`18rem`}}>
             <h5 class="card-title">{udata.Project3}</h5>
             <p class="card-text">{udata.Project3desc}</p>
-            <a href={udata.Projecturl3} class="btn btn-primary">Go somewhere</a>
+            <a href={udata.Projecturl3}><Button mr={3} color='white' bg='rebeccapurple'>Project Link</Button></a>
             </div></div>
             <div class="col-sm-6">
             <img src="https://raw.githubusercontent.com/athul/blog/master/content/assets/n1.png" class="card-img-top" alt="" />
             <div class="card-body" style={{width:`18rem`}}>
             <h5 class="card-title">{udata.Project4}</h5>
             <p class="card-text">{udata.Project4desc}</p>
-            <a href={udata.Projecturl4} class="btn btn-primary">Go somewhere</a>
+            <a href={udata.Projecturl4}><Button mr={3} color='white' bg='rebeccapurple'>Project Link</Button></a>
             </div></div></div>
             </center>
         </div>
