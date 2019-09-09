@@ -17,7 +17,7 @@ state = {
     };
  */
     componentDidMount() {
-        fetch('http://ppsuku.herokuapp.com/User/')
+        fetch('http://ppsuku.herokuapp.com/API/User/')
             .then(res => res.json())
             .then((data) => {
                 this.setState({ udatas: data })
