@@ -7,9 +7,10 @@ const User = ({ udatas }) => {
         {udatas.map((udata) => (
         <div class="card" >
             <div class="card-body" style={{
-              color:`rebeccapurple`
+              color:`crimson`
             }}>
-                <center><h1>{udata.Name}</h1></center>
+                <center><img src="https://avatars1.githubusercontent.com/athul?size=200" alt=""/><br/>
+                <h1>{udata.Name}</h1></center>
                 <center>
                 <h6 class="card-title"><u>About </u>: {udata.About}</h6>
                 <h6 class="card-title"><u>College</u>: {udata.College}</h6>
@@ -22,7 +23,6 @@ const User = ({ udatas }) => {
                 <Link px={3} variant='nav' href={udata.Instagram}><Instagram size='36' color='magenta'/></Link>
                 </span>
                 </center>
-                <><img src={udata.image} alt=""/></>
             </div >
             <div class="container">
             <div class="row">

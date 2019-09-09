@@ -13,11 +13,11 @@ state = {
         //authors: []
     };
 /*     state={
-        
+
     };
  */
     componentDidMount() {
-        fetch('http://127.0.0.1:8000/User/')
+        fetch('http://ppsuku.herokuapp.com/User/')
             .then(res => res.json())
             .then((data) => {
                 this.setState({ udatas: data })
