@@ -1,5 +1,6 @@
 import React from 'react'
 import {Box,Card,Text,Button,Link} from 'rebass'
+import Flippy, { FrontSide, BackSide } from 'react-flippy'
 import {GitHub,Instagram,Twitter,Linkedin} from 'react-feather'
 const User = ({ udatas }) => {
   let data=Array.from(udatas);
@@ -14,9 +15,10 @@ const User = ({ udatas }) => {
                 <h1>{udata.Name}</h1></center>
                 <center>
                 <h6 className="card-title"><u>About </u>: {udata.About}</h6>
-                <h6 className="card-title"><u>College</u>: {udata.College}</h6>
+                <h6 className="card-title" style={{color:`SLATEBLUE`}}><u>College</u>: {udata.College}</h6>
                 <h6 className="card-title"><u>Phone</u>: {udata.Phone}</h6>
                 <h6 className="card-title"><u>Email</u>: {udata.Email}</h6>
+                <h6 className="card-title" style={{color:`SLATEBLUE`}}>{udata.Designations}</h6>
                 <span>
                 <Link px={3} variant='nav' href={udata.GitHub}><GitHub size='36' color='black'/></Link>
                 <Link px={3} variant='nav' href={udata.Twitter}><Twitter size='36' color='aqua'/></Link>
@@ -58,34 +60,66 @@ const User = ({ udatas }) => {
             <center>
             <div className="row">
             <div className="col-sm-6">
+              <Flippy
+                flipOnClick={true}
+                flipDirection="horizontal">
+              <FrontSide >
             <img src="https://cdn.pixabay.com/photo/2019/09/04/09/48/mammal-4451152_960_720.jpg" className="card-img-top" alt="" />
-            <div className="card-body" style={{width:`18rem`}}>
-            <h5 className="card-title">{udata.Project1}</h5>
+            <h5>{udata.Project1}</h5>
+          </FrontSide><BackSide style={{ backgroundColor:'hotpink'}}>
+          <div className="card-body" style={{width:`18rem`}}>
             <p className="card-text">{udata.Project1desc}</p>
             <a href={udata.Projecturl1} ><Button mr={3} color='white' bg='rebeccapurple'>Project Link</Button></a>
-            </div>
+            </div></BackSide>
+          </Flippy>
             </div>
             <div className="col-sm-6">
+              <Flippy
+                flipOnClick={true}
+                flipDirection="horizontal">
+              <FrontSide >
             <img src="https://cdn.pixabay.com/photo/2019/08/02/09/39/mugunghwa-4379251_960_720.jpg" class="card-img-top" alt="" />
+            <h5>{udata.Project2}</h5>
+          </FrontSide>
+            <BackSide style={{ backgroundColor:'aqua'}}>
             <div className="card-body" style={{width:`18rem`}}>
-            <h5 className="card-title">{udata.Project2}</h5>
             <p className="card-text">{udata.Project2desc}</p>
             <a href={udata.Projecturl2} ><Button mr={3} color='white' bg='rebeccapurple'>Project Link</Button></a>
-            </div></div>
+            </div>
+            </BackSide>
+          </Flippy></div>
+
           <div className="col-sm-6">
+            <Flippy
+              flipOnClick={true}
+              flipDirection="horizontal">
+              <FrontSide>
             <img src="https://meenhacks.github.io/img/logo/MHACKS_transp.png" width="501" height="334" class="card-img-top"  alt="" />
-            <div className="card-body" style={{width:`18rem`}}>
-            <h5 className="card-title">{udata.Project3}</h5>
+            <h5>{udata.Project3}</h5>
+          </FrontSide>
+            <BackSide style={{ backgroundColor:'aqua'}}>
+          <div className="card-body" style={{width:`18rem`}}>
             <p className="card-text">{udata.Project3desc}</p>
             <a href={udata.Projecturl3}><Button mr={3} color='white' bg='rebeccapurple'>Project Link</Button></a>
-            </div></div>
+          </div>
+        </BackSide>
+          </Flippy></div>
             <div class="col-sm-6">
+            <Flippy
+              flipOnClick={true}
+              flipDirection="horizontal">
+            <FrontSide >
             <img src="https://raw.githubusercontent.com/athul/blog/master/content/assets/n1.png" width="501" height="334" class="card-img-top" alt="" />
-            <div className="card-body" style={{width:`18rem`}}>
-            <h5 className="card-title">{udata.Project4}</h5>
+            <h5>{udata.Project4}</h5>
+            </FrontSide >
+            <BackSide style={{ backgroundColor:'hotpink'}}>
+          <div className="card-body" style={{width:`18rem`}}>
             <p className="card-text">{udata.Project4desc}</p>
             <a href={udata.Projecturl4}><Button mr={3} color='white' bg='rebeccapurple'>Project Link</Button></a>
-            </div></div></div>
+            </div>
+            </BackSide>
+            </Flippy>
+            </div></div>
             </center>
         </div>
 
