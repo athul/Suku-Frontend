@@ -1,5 +1,5 @@
 # Suku Frontend
-
+Depecrated and Moved to PP-Suku MonoRepo
 
 Change your working directory into the project directory
 ```bash
